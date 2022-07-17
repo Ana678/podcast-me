@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+/* header */
+
+body{
+    background-color: #222222;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.header > .header--element{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #FFFFFF;
+    transition: all ease 0.4s;
+    cursor: pointer;
+}
+
+.header > .header--element.img{
+    margin-right: auto;
+    width: 140px;
+}
+
+.header > .header--element:hover, 
+.header > .header--element:focus{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* main */
+
+main{
+    background-color: #222222;
+}
+
+.container-title{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-title > .row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: calc(100vh - 160px);
+    align-items: center;
+    gap: 76px;
+}
+
+.container-title > .row > .row--title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 6.0rem;
+    line-height: 122px;
+    margin-left: 40px;
+    color: #FFFFFF;
+}
+
+.container-title > .row > .row--div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container-title > .row > .row--div > .div--sinopse{
+    width: 659px;
+    height: 589px;
+    background: rgba(35, 35, 35, 0.75);
+    border-radius: 10px;
+}
+
+.container-title > .row > .row--div > .div--sinopse > p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 37px;
+    color: #FFFFFF;
+    padding: 24px 20px;
+}
+
+.container{
+    height: 100vh;
+    padding: 40px 80px;
+}
+
+.container > .container--title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 61px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.container > .container--video{
+    width: 100%;
+    margin-top: 80px;
+    height: 80%;
+    border-radius: 10px;
+}

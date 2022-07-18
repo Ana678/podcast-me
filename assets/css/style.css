@@ -101,6 +101,9 @@ main{
 }
 
 .container{
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 1420px;
     min-height: 100vh;
     padding: 40px 110px;
     display: flex;
@@ -128,12 +131,16 @@ main{
 
 .container > .container--video{
     width: calc(100vw - 220px);
-    height: calc((100vw - 160px)*9/16);
+    height: calc((100vw - 220px)*9/16);
+    max-width: 1200px;
+    max-height: calc(1200px*9/16);
     border-radius: 10px;
 }
 
 .audio-container {
+    margin: 0 auto;
     width: 100%;
+    max-width: 1420px;
     padding: 20px 110px;
     display: flex;
     align-items: center;

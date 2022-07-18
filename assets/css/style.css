@@ -26,7 +26,6 @@ body{
     font-style: normal;
     font-weight: 500;
     font-size: 1.2rem;
-    line-height: 30px;
     color: #FFFFFF;
     transition: all ease 0.4s;
     cursor: pointer;
@@ -50,8 +49,9 @@ main{
 }
 
 .container-title{
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
     background-image: url("../img/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -59,32 +59,33 @@ main{
 
 .container-title > .row{
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
-    height: calc(100vh - 160px);
+    min-height: calc(100vh - 160px);
     align-items: center;
-    gap: 76px;
+    gap: 50px;
 }
 
 .container-title > .row > .row--title{
+    width: 620px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
     font-size: 6.0rem;
-    line-height: 122px;
     margin-left: 40px;
     color: #FFFFFF;
 }
 
 .container-title > .row > .row--div{
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
 .container-title > .row > .row--div > .div--sinopse{
-    width: 659px;
-    height: 589px;
+    width: 100%;
+    min-height: 589px;
     background: rgba(35, 35, 35, 0.75);
     border-radius: 10px;
 }
@@ -100,7 +101,7 @@ main{
 }
 
 .container{
-    height: 100vh;
+    min-height: 100vh;
     padding: 40px 80px;
 }
 
@@ -109,14 +110,79 @@ main{
     font-style: normal;
     font-weight: 800;
     font-size: 3rem;
-    line-height: 61px;
     text-align: center;
     color: #FFFFFF;
 }
 
 .container > .container--video{
-    width: 100%;
+    width: calc(100vw - 160px);
+    height: calc((100vw - 160px)*9/16);
     margin-top: 80px;
-    height: 80%;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .title {
+        font-size: 4rem;
+    }
+
+    .header > .header--element {
+        font-size: 0.8rem;
+    }
+
+    .header > .header--element:hover, 
+    .header > .header--element:focus{
+        font-size: 1.0rem;
+    }
+
+    .container-title > .row > .row--title {
+        width: 500px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0;
+    }
+
+    .header > img.header--element {
+        margin-left: auto;
+    }
+
+    .header > a.header--element {
+        display: none;
+    }
+
+    .container-title > .row {
+        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    .container-title > .row > .row--title {
+        margin-left: 0;
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .container-title > .row > .row--div > .div--sinopse {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .container {
+        height: fit-content;
+        min-height: 0;
+        padding: 40px 10px;
+    }
+
+    .container > .container--title{
+        font-size: 1.5rem;
+    }
+
+    .container > .container--video {
+        width: calc(100vw - 20px);
+        height: calc((100vw - 20px)*9/16);
+    }
 }

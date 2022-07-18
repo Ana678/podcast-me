@@ -112,12 +112,12 @@ main{
     font-size: 3rem;
     text-align: center;
     color: #FFFFFF;
+    margin: 0 0 80px;
 }
 
 .container > .container--video{
     width: calc(100vw - 160px);
     height: calc((100vw - 160px)*9/16);
-    margin-top: 80px;
     border-radius: 10px;
 }
 
@@ -184,6 +184,44 @@ main{
     color: white;
     text-align: end;
     grid-area: opt-2;
+}
+
+.material-div {
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: grid;
+    grid:
+        'name name' auto
+        'filename save' auto
+        / 1fr auto;
+    align-items: center;
+    gap: 15px;
+}
+
+.material-div > .name {
+    grid-area: name;
+    font: 600 1.2rem 'Montserrat';
+}
+
+.material-div > .filename {
+    grid-area: filename;
+    font: 300 0.8rem 'Montserrat';
+}
+
+.material-div > .save {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 100%;
+    background: #5FB3B5;
+    grid-area: save;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 992px) {

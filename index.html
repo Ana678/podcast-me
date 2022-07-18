@@ -112,8 +112,24 @@
             <a href="./assets/files/notas-de-aula-v1.14.pdf" download="notas-de-aula-v1.14.pdf"  class="save"><span class="fa fa-save"></span></a>
         </div>
     </section>
+    <section class="container" id="FAQ">
+        <p class="container--title">FAQ</p>
+        <p class="container--subtitle">Perguntas</p>
+        <div class="overlay" id="question-alert">
+            <div class="modal" id="question-alert-wrapper">
+                <p class="modal-title">Pergunta</p>
+                <textarea class="modal-input" id="question-input" placeholder="Digite aqui sua pergunta..."></textarea>
+                <button class="button" id="submit-question-button">Enviar</button>
+            </div>
+        </div>
+        <div id="questions" class="questions-div">
+        </div>
+        <button class="button" id="question-button">Envie sua pergunta</button>
+    </section>
     <main>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+    </script>
     <script src="./assets/js/functions.js"></script>
 </body>
 </html>

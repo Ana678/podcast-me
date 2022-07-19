@@ -24,8 +24,8 @@
             <a class="header--element" href="#video">VÍDEO</a>
             <a class="header--element" href="#classificacoes">CLASSIFICAÇÕES</a>
             <a class="header--element" href="#materiais">MATERIAIS</a>
-            <a class="header--element">FAQ</a>
-            <a class="header--element">HABILIDADES</a>
+            <a class="header--element" href="#faq">FAQ</a>
+            <a class="header--element" href="#habilidades">HABILIDADES</a>
         </header>
 
         <div class="row">
@@ -111,8 +111,8 @@
             <a href="./assets/files/notas-de-aula-v1.14.pdf" download="notas-de-aula-v1.14.pdf"  class="save"><span class="fa fa-save"></span></a>
         </div>
     </section>
-    <section class="container" id="FAQ">
-        <p class="container--title">FAQ</p>
+    <section class="container" id="faq">
+        <p class="container--title">FAQ - Perguntas Frequentes dos Alunos</p>
         <p class="container--subtitle">Perguntas</p>
         <div class="overlay" id="question-alert">
             <div class="modal" id="question-alert-wrapper">
@@ -125,10 +125,25 @@
         </div>
         <button class="button" id="question-button">Envie sua pergunta</button>
     </section>
+    <section class="container" id="habilidades">
+        <p class="container--title">Habilidades</p>
+        <div class="container--cards">
+            <div class="card-div">
+                <p class="title">Competências necessárias para cursar a disciplina</p>
+                <p class="content">notas-de-aula-v1.14.pdf</p>        
+            </div>
+            <div class="card-div">
+                <p class="title">Competências esperadas no final da disciplina</p>
+                <p class="content">notas-de-aula-v1.14.pdf</p>        
+            </div>            
+        </div>
+
+    </section>
     <main>
     </main>
     <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
     </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>        
     <script src="./assets/js/functions.js"></script>
 </body>
 </html>

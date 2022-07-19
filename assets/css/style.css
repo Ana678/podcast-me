@@ -432,6 +432,30 @@ main{
     border-radius: 50%;
 }
 
+@media screen and (max-width: 1200px) {
+    .container-title > .row {
+        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    .container-title > .row > .row--div {
+        align-items: flex-start;
+        height: fit-content;
+    }
+
+    .container-title > .row > .row--title {
+        margin-left: 0;
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .container-title > .row > .row--div > .div--sinopse {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .header > .header--element {
         font-size: 0.8rem;
@@ -440,11 +464,6 @@ main{
     .header > .header--element:hover, 
     .header > .header--element:focus{
         font-size: 1.0rem;
-    }
-
-    .container-title > .row > .row--title {
-        width: 500px;
-        font-size: 5rem;
     }
 
 }
@@ -462,21 +481,8 @@ main{
         display: none;
     }
 
-    .container-title > .row {
-        padding: 0 10px;
-        flex-direction: column;
-    }
-
-    .container-title > .row > .row--title {
-        margin-left: 0;
-        width: 100%;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .container-title > .row > .row--div > .div--sinopse {
-        margin: 0 auto;
-        width: 90%;
+    .container-title, .container-title > .row {
+        min-height: 0;
     }
 
     .container {
@@ -485,6 +491,13 @@ main{
         padding: 40px 10px;
     }
 
+    .container-title > .row > .row--title {
+        margin-left: 0;
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
     .container > .container--title{
         font-size: 1.5rem;
     }

@@ -98,7 +98,7 @@ main{
     font-size: 1.2rem;
     line-height: 37px;
     color: #FFFFFF;
-    padding: 24px 20px;
+    padding: 24px 30px;
 }
 
 .container{
@@ -217,6 +217,7 @@ main{
         / 1fr auto;
     align-items: center;
     gap: 15px;
+    margin-bottom: 20px;
 }
 
 .material-div > .name {
@@ -226,7 +227,7 @@ main{
 
 .material-div > .filename {
     grid-area: filename;
-    font: 300 0.8rem 'Montserrat';
+    font: 300 0.9rem 'Montserrat';
 }
 
 .material-div > .save {
@@ -241,6 +242,10 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.material-div > .save > span{
+    line-height: 25px;
 }
 
 .overlay {
@@ -340,7 +345,7 @@ main{
 .container--cards{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     width: 100%;
 }
 
@@ -351,7 +356,7 @@ main{
     padding: 20px 25px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
 .container--cards > .card-div > .title {
@@ -361,7 +366,20 @@ main{
 
 .container--cards > .card-div > .content {
     grid-area: content;
-    font: 300 0.9rem 'Montserrat';
+    font: 400 0.9rem 'Montserrat';
+}
+
+.page-up > .fa.fa-arrow-up{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 35px;
+    margin-bottom: 35px;
+    background-color: rgb(38, 150, 154,0.5);
+    color: #fff3e2;
+    padding: 10px;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 992px) {
@@ -432,5 +450,9 @@ main{
 
     .audio-container {
         padding: 20px 10px;
+    }
+
+    .container-title > .row > .row--div > .div--sinopse > p{
+        font-size: 1rem;
     }
 }

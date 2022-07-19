@@ -73,3 +73,20 @@ $('.header a[href^="#"]').on('click', function(e) {
     }, 500);
 });
 
+$('.page-up').on('click', function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href'),
+    targetOffset = $(id).offset().top;
+      
+    $('html, body').animate({ 
+      scrollTop: targetOffset
+    }, 500);
+});
+
+$(window).scroll(function () {
+	if ($(this).scrollTop() > $(window).height()) {
+		$(".page-up > span").attr("style", "display: block");
+	} else {
+        $(".page-up > span").attr("style", "display: none");
+	}      
+});

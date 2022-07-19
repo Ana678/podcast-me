@@ -68,7 +68,7 @@ main{
 }
 
 .container-title > .row > .row--title{
-    width: 620px;
+    width: min-content;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
@@ -381,6 +381,12 @@ main{
 .container--cards > .card-div > .content {
     grid-area: content;
     font: 400 0.9rem 'Montserrat';
+    margin-bottom: 20px;
+}
+
+.container--cards > .card-div > .content.obstabulos{
+    font-size: 1rem; 
+    margin-top: 20px;
 }
 
 .avaliation-step {

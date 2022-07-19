@@ -354,6 +354,7 @@ main{
 .question-content {
     font: 400 1rem 'Montserrat';
     text-align: start;
+    line-height: 1.3rem;
 }
 
 .container--cards{
@@ -382,11 +383,13 @@ main{
     grid-area: content;
     font: 400 0.9rem 'Montserrat';
     margin-bottom: 20px;
+    line-height: 1.2rem;
 }
 
 .container--cards > .card-div > .content.obstabulos{
     font-size: 1rem; 
     margin-top: 20px;
+    line-height: 1.3rem;
 }
 
 .avaliation-step {
@@ -454,21 +457,18 @@ main{
         margin: 0 auto;
         width: 90%;
     }
-}
 
-@media screen and (max-width: 992px) {
     .header > .header--element {
-        font-size: 0.8rem;
+        font-size: 0.95rem;
     }
 
     .header > .header--element:hover, 
     .header > .header--element:focus{
-        font-size: 1.0rem;
+        font-size: 1.2rem;
     }
-
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
     .header {
         padding: 0;
     }

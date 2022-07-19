@@ -519,3 +519,9 @@ main{
         font-size: 1rem;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .container-title > .row > .row--div > .div--sinopse > p{
+        font-size: 0.8rem;
+    }
+}

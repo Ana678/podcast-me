@@ -312,6 +312,7 @@ main{
 }
 
 .button {
+    margin: 20px 0 0;
     border: none;
     background: #5FB3B5;
     padding: 10px 20px;
@@ -380,6 +381,36 @@ main{
 .container--cards > .card-div > .content {
     grid-area: content;
     font: 400 0.9rem 'Montserrat';
+}
+
+.avaliation-step {
+    width: 100%;
+}
+
+.grades {
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.grade-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: none;
+    background: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.grade-button.selected {
+    background: #5FB3B5;
+}
+
+.grade-button:hover {
+    filter: brightness(1.2);
 }
 
 .page-up > .fa.fa-arrow-up{

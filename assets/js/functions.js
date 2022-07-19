@@ -14,22 +14,70 @@ const questionsArea = document.getElementById('questions');
 const questionButton = document.getElementById('question-button');
 const questionInput = document.getElementById('question-input');
 const submitQuestionButton = document.getElementById('submit-question-button');
+const answerAlert = document.getElementById('answer-alert');
+const answerAlertWrapper = document.getElementById('answer-alert-wrapper');
+const answerAlertQuestion = document.getElementById('question');
+const answerContent = document.getElementById('answer');
+const readAnswerButton = document.getElementById('read-answer-button');
 
-const renderQuestion = (text) => {
+const renderQuestion = (id, data) => {
     const questionElement = document.createElement('button');
+    questionElement.id = id;
     questionElement.classList.add('question-div');
+    questionElement.onclick = () => {
+        answerAlertQuestion.textContent = data.content;
+        answerContent.textContent = data.answer;
+        answerAlert.classList.add('open');
+    };
 
     const questionContent = document.createElement('p');
     questionContent.classList.add('question-content');
-    questionContent.textContent = text;
+    questionContent.textContent = data.content;
+
+    if (data.answer === '') {
+        questionElement.classList.add('hidden');
+    }
 
     questionElement.appendChild(questionContent);
 
     questionsArea.appendChild(questionElement);
 };
 
+const updateQuestion = (id, data) => {
+    const questionElement = document.getElementById(id);
+    questionElement.onclick = () => {
+        answerAlertQuestion.textContent = data.content;
+        answerContent.textContent = data.answer;
+        answerAlert.classList.add('open');
+    };
+
+    const questionContent = questionElement.childNodes.item(0);
+    questionContent.textContent = data.content;
+    
+
+    if (data.answer === '') {
+        questionElement.classList.add('hidden');
+    } else {
+        questionElement.classList.remove('hidden');
+    }
+};
+
+const deleteQuestion = (id) => {
+    const questionElement = document.getElementById(id);
+
+    questionsSection.removeChild(questionElement);
+}
+
 questionsRef.on('child_added', data => {
-    renderQuestion(data.val().content);
+    renderQuestion(data.key, data.val());
+});
+
+questionsRef.on('child_changed', data => {
+    updateQuestion(data.key, data.val());
+});
+
+questionsRef.on('child_removed', data => {
+    deleteQuestion(data.key);
 });
 
 questionButton.addEventListener('click', () => {
@@ -60,6 +108,18 @@ submitQuestionButton.addEventListener('click', () => {
             answer: '',
         });
     }
+});
+
+readAnswerButton.addEventListener('click', () => {
+    answerAlert.classList.remove('open');
+});
+
+answerAlertWrapper.addEventListener('click', e => {
+    e.stopPropagation();
+});
+
+answerAlert.addEventListener('click', () => {
+    answerAlert.classList.remove('open');
 });
 
 

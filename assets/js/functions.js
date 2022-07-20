@@ -107,6 +107,8 @@ submitQuestionButton.addEventListener('click', () => {
             content: question,
             answer: '',
         });
+
+        window.alert('Sua pergunta foi enviada.');
     }
 });
 
@@ -253,5 +255,7 @@ sendAvaliationButton.addEventListener('click', () => {
         localStorage.setItem('avaliation', JSON.stringify(avaliation));
 
         avaliateAlert.classList.remove('open');
+
+        window.alert('Sua avaliação foi enviada.');
     }
 });
